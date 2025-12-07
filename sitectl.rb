@@ -5,20 +5,20 @@
 class Sitectl < Formula
   desc ""
   homepage "https://github.com/libops/sitectl"
-  version "0.0.2"
+  version "0.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/LibOps/sitectl/releases/download/0.0.2/sitectl_Darwin_x86_64.tar.gz"
-      sha256 "172e70c3ea374c4fbae6a5cbdc8c991b6ba19f30110c5b597d2e76767461c57f"
+      url "https://github.com/libops/sitectl/releases/download/0.0.1/sitectl_Darwin_x86_64.tar.gz"
+      sha256 "1835a31ff420ae3ab9242a1dcee63adbb854768ed2c2027a148d9a0b23cec212"
 
       def install
         bin.install "sitectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/LibOps/sitectl/releases/download/0.0.2/sitectl_Darwin_arm64.tar.gz"
-      sha256 "378e5865b3c0d38aa8cd1d7698a032fea66d32966b961bba97d785485554732e"
+      url "https://github.com/libops/sitectl/releases/download/0.0.1/sitectl_Darwin_arm64.tar.gz"
+      sha256 "18c9b4e949879e59abd94847d729519bf8b10d0007730b0f38ce9088cac710b7"
 
       def install
         bin.install "sitectl"
@@ -27,24 +27,18 @@ class Sitectl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/LibOps/sitectl/releases/download/0.0.2/sitectl_Linux_x86_64.tar.gz"
-        sha256 "b49be1d5428609dc560f11b85d8e423d52ec7f99cd2489b865aaad7f1f0f9c49"
-
-        def install
-          bin.install "sitectl"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/libops/sitectl/releases/download/0.0.1/sitectl_Linux_x86_64.tar.gz"
+      sha256 "5077ad236c296d14780177e8b9392159fa0ded978f76a5d619f34fd435118241"
+      def install
+        bin.install "sitectl"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/LibOps/sitectl/releases/download/0.0.2/sitectl_Linux_arm64.tar.gz"
-        sha256 "f6663d1991a034ce4dd00abd31271ca34c40723df642c3b406976f8467443b8e"
-
-        def install
-          bin.install "sitectl"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/libops/sitectl/releases/download/0.0.1/sitectl_Linux_arm64.tar.gz"
+      sha256 "8b41b27f2c36771e2df368814b27ebd15ebec5fb73efe25739e96e121d52e343"
+      def install
+        bin.install "sitectl"
       end
     end
   end
