@@ -5,20 +5,20 @@
 class Sitectl < Formula
   desc ""
   homepage "https://github.com/libops/sitectl"
-  version "0.1.0"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl/releases/download/v0.1.0/sitectl_Darwin_x86_64.tar.gz"
-      sha256 "d19d13fe8861545210caec9840f25a577c0e8ca3c5dcf7ae57ff0d4f682747a6"
+      url "https://github.com/libops/sitectl/releases/download/v0.1.2/sitectl_Darwin_x86_64.tar.gz"
+      sha256 "d6640afcda2c3b0d0a9e3400d6b9b22fcd58ee3c964cd2cc37c136298e1424f3"
 
       def install
         bin.install "sitectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl/releases/download/v0.1.0/sitectl_Darwin_arm64.tar.gz"
-      sha256 "8639c0e804c43f4aa7b10d722a21f7f4e452b818dc999b949a2a6f575dbea14f"
+      url "https://github.com/libops/sitectl/releases/download/v0.1.2/sitectl_Darwin_arm64.tar.gz"
+      sha256 "ade1e1540b700bcef58e48b485073c94795d9abf9e51a13da1fd0356ceea64b0"
 
       def install
         bin.install "sitectl"
@@ -28,15 +28,15 @@ class Sitectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl/releases/download/v0.1.0/sitectl_Linux_x86_64.tar.gz"
-      sha256 "9d07ae49fcfe363d9506610c3cfdb3531f27b2cfc6c37fde810e4eae43de4b16"
+      url "https://github.com/libops/sitectl/releases/download/v0.1.2/sitectl_Linux_x86_64.tar.gz"
+      sha256 "30a987ba3c4f23a658276a3147e8832b892992ace9d6ed0e51bf6e777b529184"
       def install
         bin.install "sitectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl/releases/download/v0.1.0/sitectl_Linux_arm64.tar.gz"
-      sha256 "924839f893e7262c2794ede2106e3e5d68136da5289ddd97738eb594df973c80"
+      url "https://github.com/libops/sitectl/releases/download/v0.1.2/sitectl_Linux_arm64.tar.gz"
+      sha256 "8d816d0f3060f85b9647ad6bb426f29a66bfab619a7f477afab78b14a85a23cb"
       def install
         bin.install "sitectl"
       end
