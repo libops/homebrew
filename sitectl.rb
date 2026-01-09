@@ -10,7 +10,7 @@ class Sitectl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/libops/sitectl/releases/download/v0.1.0/sitectl_Darwin_x86_64.tar.gz"
-      sha256 "554c63fdeb80a665aa5a6a68c860e99971a486ef9fc3e2b6fed212fca21c7e64"
+      sha256 "d19d13fe8861545210caec9840f25a577c0e8ca3c5dcf7ae57ff0d4f682747a6"
 
       def install
         bin.install "sitectl"
@@ -18,7 +18,7 @@ class Sitectl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/libops/sitectl/releases/download/v0.1.0/sitectl_Darwin_arm64.tar.gz"
-      sha256 "6180186d22ae0db56176b97e2256ade73301f52e0160d0dc09cbc75a52d4507f"
+      sha256 "8639c0e804c43f4aa7b10d722a21f7f4e452b818dc999b949a2a6f575dbea14f"
 
       def install
         bin.install "sitectl"
@@ -29,14 +29,14 @@ class Sitectl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl/releases/download/v0.1.0/sitectl_Linux_x86_64.tar.gz"
-      sha256 "9487976bf643bf79abe88c3002c790d8ecaa2e1e922424d76c07019e3dbfef49"
+      sha256 "9d07ae49fcfe363d9506610c3cfdb3531f27b2cfc6c37fde810e4eae43de4b16"
       def install
         bin.install "sitectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl/releases/download/v0.1.0/sitectl_Linux_arm64.tar.gz"
-      sha256 "b1e7339df6581f7703a827e2c379a6adc9ee16c58689a77218fa28b4af3d10df"
+      sha256 "924839f893e7262c2794ede2106e3e5d68136da5289ddd97738eb594df973c80"
       def install
         bin.install "sitectl"
       end
