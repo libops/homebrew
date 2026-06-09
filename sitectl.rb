@@ -5,20 +5,20 @@
 class Sitectl < Formula
   desc ""
   homepage "https://github.com/libops/sitectl"
-  version "0.17.4"
+  version "0.18.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl/releases/download/v0.17.4/sitectl_Darwin_x86_64.tar.gz"
-      sha256 "816d911909bf368f75ca1c1ebc0a8d19e123f9ce6c3cddcd0421618010fc00f8"
+      url "https://github.com/libops/sitectl/releases/download/v0.18.0/sitectl_Darwin_x86_64.tar.gz"
+      sha256 "b4a7e39fe6121ffda5a4819954f64dbbe630780576d60a27a714829ef340d96d"
 
       define_method(:install) do
         bin.install "sitectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl/releases/download/v0.17.4/sitectl_Darwin_arm64.tar.gz"
-      sha256 "db6dbe67286e193a9b808c157b9d7810e215efe6a3f36db9127feb6102a7d90a"
+      url "https://github.com/libops/sitectl/releases/download/v0.18.0/sitectl_Darwin_arm64.tar.gz"
+      sha256 "72a2646555279f69dcbce7e017d9dcff069239a1cded30518a2ab761569d5171"
 
       define_method(:install) do
         bin.install "sitectl"
@@ -28,15 +28,15 @@ class Sitectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl/releases/download/v0.17.4/sitectl_Linux_x86_64.tar.gz"
-      sha256 "f7ca2fdc70ac51f8322342deafc3d843740c5d044b0d0d307811beebc19ff6e5"
+      url "https://github.com/libops/sitectl/releases/download/v0.18.0/sitectl_Linux_x86_64.tar.gz"
+      sha256 "067296f0bf580161da65bafbb6db986eec56dace83aa5b61ba73964306dbceff"
       define_method(:install) do
         bin.install "sitectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl/releases/download/v0.17.4/sitectl_Linux_arm64.tar.gz"
-      sha256 "d90f1e4e9d4f262f5e6f91be65768078220f9cb6df2632615b20d07a0880f0af"
+      url "https://github.com/libops/sitectl/releases/download/v0.18.0/sitectl_Linux_arm64.tar.gz"
+      sha256 "e7f4d8f32c0f06f3423be2456eddf9a6acef37ee9ab4dc9268b9a29a071286ac"
       define_method(:install) do
         bin.install "sitectl"
       end
