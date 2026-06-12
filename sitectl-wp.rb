@@ -5,22 +5,23 @@
 class SitectlWp < Formula
   desc ""
   homepage "https://github.com/libops/sitectl-wp"
-  version "0.0.1"
+  version "0.1.0"
 
   depends_on "libops/homebrew/sitectl"
+  depends_on "libops/homebrew/sitectl-triplet"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl-wp/releases/download/v0.0.1/sitectl-wp_Darwin_x86_64.tar.gz"
-      sha256 "6cae30aba3989e35163b7d25327676591cc5cca9ba1ec9ad789c6bf8d746a501"
+      url "https://github.com/libops/sitectl-wp/releases/download/v0.1.0/sitectl-wp_Darwin_x86_64.tar.gz"
+      sha256 "e0d58085b0bbe1daaf8cb18302e4a77d4f40e7a3615bec6b4f94756ed21be488"
 
       define_method(:install) do
         bin.install "sitectl-wp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl-wp/releases/download/v0.0.1/sitectl-wp_Darwin_arm64.tar.gz"
-      sha256 "bbeb5d32d3c1ff11468b5f09bd59c8fa5c23f2814ac1548e84bcb3f4005409bd"
+      url "https://github.com/libops/sitectl-wp/releases/download/v0.1.0/sitectl-wp_Darwin_arm64.tar.gz"
+      sha256 "cea431db8154f055d680b29dc42017ce532ec552e46996b0ad97826016fc5b0b"
 
       define_method(:install) do
         bin.install "sitectl-wp"
@@ -30,15 +31,15 @@ class SitectlWp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-wp/releases/download/v0.0.1/sitectl-wp_Linux_x86_64.tar.gz"
-      sha256 "568adc3b75402f1228aba34e27a22640c9e7f384ad0b102cbd08fda0cc31e259"
+      url "https://github.com/libops/sitectl-wp/releases/download/v0.1.0/sitectl-wp_Linux_x86_64.tar.gz"
+      sha256 "3a63c49b92a55fa4b88090e04f2501d518cee4d1e1a27e7777894e22bd724be9"
       define_method(:install) do
         bin.install "sitectl-wp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-wp/releases/download/v0.0.1/sitectl-wp_Linux_arm64.tar.gz"
-      sha256 "c0702a2125182f8186e18fb12d0cb8e8f87370a8cd23f5ef6ba78251991503cc"
+      url "https://github.com/libops/sitectl-wp/releases/download/v0.1.0/sitectl-wp_Linux_arm64.tar.gz"
+      sha256 "638f43449e4394a87bdae09176ebe9d7ff519fe80a6963b39e0517191ec1f6c8"
       define_method(:install) do
         bin.install "sitectl-wp"
       end
