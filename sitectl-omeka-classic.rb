@@ -13,7 +13,7 @@ class SitectlOmekaClassic < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/libops/sitectl-omeka-classic/releases/download/v0.1.0/sitectl-omeka-classic_Darwin_x86_64.tar.gz"
-      sha256 "d397f79d84942e1f0cd31e107e7a35d4f13b845709c9b6dba36b6e81752ace80"
+      sha256 "6c72c2061a1349bd6f71cc7c91b5df78d3fe31c7be217cdc43cf9f5b6fc480a8"
 
       define_method(:install) do
         bin.install "sitectl-omeka-classic"
@@ -21,7 +21,7 @@ class SitectlOmekaClassic < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/libops/sitectl-omeka-classic/releases/download/v0.1.0/sitectl-omeka-classic_Darwin_arm64.tar.gz"
-      sha256 "e3f886aa289f405c6970f47e6fa76a4eb0e9e74a0c0112bbb4e5b58f3f04ae71"
+      sha256 "153e1f09880146bf579d8ae43a68f33dac9bc2942217e478c3663ce0215bda34"
 
       define_method(:install) do
         bin.install "sitectl-omeka-classic"
@@ -32,14 +32,14 @@ class SitectlOmekaClassic < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-omeka-classic/releases/download/v0.1.0/sitectl-omeka-classic_Linux_x86_64.tar.gz"
-      sha256 "cfdc02b3f3132ed154bcdf032210c77544416d1dae052ee06f62d4b0c15c04e9"
+      sha256 "b14fefc84da89f7158be94d38b2aa406121c169637f839b788c129a277d7d229"
       define_method(:install) do
         bin.install "sitectl-omeka-classic"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-omeka-classic/releases/download/v0.1.0/sitectl-omeka-classic_Linux_arm64.tar.gz"
-      sha256 "3686d0b340fe65dd3dea8ce51da804daf98860562a25a442ee8398ec7ff39c70"
+      sha256 "2e3fabec8e554c94681cb6f491eb7f253e4dc164d2a6b89f6978209321c67c3c"
       define_method(:install) do
         bin.install "sitectl-omeka-classic"
       end
