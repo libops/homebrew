@@ -13,7 +13,7 @@ class SitectlOjs < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/libops/sitectl-ojs/releases/download/v0.1.0/sitectl-ojs_Darwin_x86_64.tar.gz"
-      sha256 "95effceeff09d3df6ce205a574c645c29dd59890492c3c375ca97218c79a5d26"
+      sha256 "b800f8d894da8972ac5104b599a02caf0cbb9438bf61ab9a73c852bafe54568c"
 
       define_method(:install) do
         bin.install "sitectl-ojs"
@@ -21,7 +21,7 @@ class SitectlOjs < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/libops/sitectl-ojs/releases/download/v0.1.0/sitectl-ojs_Darwin_arm64.tar.gz"
-      sha256 "4d3e3c8afd5f090910e9c33ab376cb133516eb01caedd4d450da514ce0bd2af7"
+      sha256 "eab3ef865c5ed2db6f86ccf8125a3dfbcd9992c1b17918263b67b59138039ebe"
 
       define_method(:install) do
         bin.install "sitectl-ojs"
@@ -32,14 +32,14 @@ class SitectlOjs < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-ojs/releases/download/v0.1.0/sitectl-ojs_Linux_x86_64.tar.gz"
-      sha256 "1bb06a65d273e8cc8e2571e923fb52987981566be41cbe9a792ded4d3a7d61e4"
+      sha256 "1127468c6308fa7ced620e697e797ff05d9e48ab633cf394d859810456a7412f"
       define_method(:install) do
         bin.install "sitectl-ojs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-ojs/releases/download/v0.1.0/sitectl-ojs_Linux_arm64.tar.gz"
-      sha256 "c29167a16c27572bb3935b9aa70d71c5be3b9b70da0162e97abb51dca4218a83"
+      sha256 "40ec605a716b6d72f6ab11d8edc88d4c06fd15b2f63ad4cf541978a2b7fcc937"
       define_method(:install) do
         bin.install "sitectl-ojs"
       end
