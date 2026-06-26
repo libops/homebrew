@@ -12,7 +12,7 @@ class SitectlArchivesspace < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.1.0/sitectl-archivesspace_Darwin_x86_64.tar.gz"
-      sha256 "518a2aa45e493744ce5e33671b264e6a3c72784ff0c2b2ee23f01c5d21eb276c"
+      sha256 "1843fd20d163c4cb02f78d4a511b4784a8ef1cd1b89b1b97a1b4dd259ea049cc"
 
       define_method(:install) do
         bin.install "sitectl-archivesspace"
@@ -20,7 +20,7 @@ class SitectlArchivesspace < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.1.0/sitectl-archivesspace_Darwin_arm64.tar.gz"
-      sha256 "0ebf50d01d23d28ab21e520385c901c100fd1e0d8cf1dfaef9a673760b729632"
+      sha256 "f9ce9cbc966727b25317d229d75a1bf112510fb1854747d49b2674ada62da978"
 
       define_method(:install) do
         bin.install "sitectl-archivesspace"
@@ -31,14 +31,14 @@ class SitectlArchivesspace < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.1.0/sitectl-archivesspace_Linux_x86_64.tar.gz"
-      sha256 "3d9d80b17fe7f1b5dc6b3a64ea04aa7e82fb390d11a216ff8f71639295257137"
+      sha256 "dd6e784b411b06140e90af4e514e2e5bbd3c4e7243f221b16ea878793a4f3fbd"
       define_method(:install) do
         bin.install "sitectl-archivesspace"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.1.0/sitectl-archivesspace_Linux_arm64.tar.gz"
-      sha256 "3ebb880dc42edc89424d483d5547326fd9e7ab9e5c0afc7ac1fe2a2e29e3c2fb"
+      sha256 "6d57422a1627725900578c07024f9ea3767234ec534f17e569c66bc48742da4b"
       define_method(:install) do
         bin.install "sitectl-archivesspace"
       end
