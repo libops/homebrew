@@ -5,23 +5,23 @@
 class SitectlOjs < Formula
   desc ""
   homepage "https://github.com/libops/sitectl-ojs"
-  version "0.4.0"
+  version "0.4.1"
 
   depends_on "libops/homebrew/sitectl"
   depends_on "libops/homebrew/sitectl-triplet"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl-ojs/releases/download/v0.4.0/sitectl-ojs_Darwin_x86_64.tar.gz"
-      sha256 "15a298982ca0d65146d6ff5ce6f0a055e1639d3078e0f9f1524f04c9c1108534"
+      url "https://github.com/libops/sitectl-ojs/releases/download/v0.4.1/sitectl-ojs_Darwin_x86_64.tar.gz"
+      sha256 "cd0c700695fc5355e49ed1eb33a1423b08d3e47bbdea0fedfe3b94bdfec1e767"
 
       define_method(:install) do
         bin.install "sitectl-ojs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl-ojs/releases/download/v0.4.0/sitectl-ojs_Darwin_arm64.tar.gz"
-      sha256 "d9fa8654bc5e0351ddfe71dfb129c8d105389f84014d882049d1a7cfb38b0afa"
+      url "https://github.com/libops/sitectl-ojs/releases/download/v0.4.1/sitectl-ojs_Darwin_arm64.tar.gz"
+      sha256 "07eb476cbd7067b66d1e7899039f29dbc1a4b7d75fb3f72246d0bcf7b33d4a9f"
 
       define_method(:install) do
         bin.install "sitectl-ojs"
@@ -31,15 +31,15 @@ class SitectlOjs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-ojs/releases/download/v0.4.0/sitectl-ojs_Linux_x86_64.tar.gz"
-      sha256 "7772418b172bf170761060535d50442569bbb39d4c3727fb7c52a4221f34459b"
+      url "https://github.com/libops/sitectl-ojs/releases/download/v0.4.1/sitectl-ojs_Linux_x86_64.tar.gz"
+      sha256 "50370cea4eef8db6b1d09bc5009c38688b885109f80e2288a62ce85d5bede477"
       define_method(:install) do
         bin.install "sitectl-ojs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-ojs/releases/download/v0.4.0/sitectl-ojs_Linux_arm64.tar.gz"
-      sha256 "c84a6d79e77c3386cfb6fe71ce487e6779cb11b553d16040804d2d992d244ff6"
+      url "https://github.com/libops/sitectl-ojs/releases/download/v0.4.1/sitectl-ojs_Linux_arm64.tar.gz"
+      sha256 "faaa79b38f365955f375ada7b84ce42be2d152d024776bab43085bcd418d1182"
       define_method(:install) do
         bin.install "sitectl-ojs"
       end
