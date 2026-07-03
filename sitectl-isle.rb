@@ -13,7 +13,7 @@ class SitectlIsle < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/libops/sitectl-isle/releases/download/v0.17.3/sitectl-isle_Darwin_x86_64.tar.gz"
-      sha256 "a05e028c2c63fb68f99db0bf0dca3ae9c0aa2c1a3e95067d90a6c2642d39340c"
+      sha256 "feaf14e1447406be0f39e5621edfb0b17aa7573a91549f58ea27663c049c34e7"
 
       define_method(:install) do
         bin.install "sitectl-isle"
@@ -21,7 +21,7 @@ class SitectlIsle < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/libops/sitectl-isle/releases/download/v0.17.3/sitectl-isle_Darwin_arm64.tar.gz"
-      sha256 "f3e8d9f95d6c60aa2d11e40f635b27b59d6fbf71f26ab682fa326b2652207466"
+      sha256 "710d20a4d0e0003111e8bfda69683c8fb894b4819b4332334ef74e98b5e9b246"
 
       define_method(:install) do
         bin.install "sitectl-isle"
@@ -32,14 +32,14 @@ class SitectlIsle < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-isle/releases/download/v0.17.3/sitectl-isle_Linux_x86_64.tar.gz"
-      sha256 "c0f076c4f825c3de5373a782cd4868408ed9e8a5eca1f808d40f3a3c220f30c9"
+      sha256 "efdd4e8fb3f0aa609479aaadcae32b2969b4f238b400bd4fc4932bd9ae36921e"
       define_method(:install) do
         bin.install "sitectl-isle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-isle/releases/download/v0.17.3/sitectl-isle_Linux_arm64.tar.gz"
-      sha256 "dc15cbb4145fd4676d2e44ab7dcf09c3975dc7846cfe517ffbd3d30b8a2d2dd3"
+      sha256 "f272762aff8f78cba9a074f8e9929fd0b0fc152ade557b6750dcf8ed6b395895"
       define_method(:install) do
         bin.install "sitectl-isle"
       end
