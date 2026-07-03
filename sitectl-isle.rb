@@ -5,23 +5,23 @@
 class SitectlIsle < Formula
   desc ""
   homepage "https://github.com/libops/sitectl-isle"
-  version "0.17.3"
+  version "0.17.4"
 
   depends_on "libops/homebrew/sitectl"
   depends_on "libops/homebrew/sitectl-drupal"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl-isle/releases/download/v0.17.3/sitectl-isle_Darwin_x86_64.tar.gz"
-      sha256 "feaf14e1447406be0f39e5621edfb0b17aa7573a91549f58ea27663c049c34e7"
+      url "https://github.com/libops/sitectl-isle/releases/download/v0.17.4/sitectl-isle_Darwin_x86_64.tar.gz"
+      sha256 "91c6c0484cea5c420b02236e9ca33689c18c471a72607e3507c9afbe0d1408dd"
 
       define_method(:install) do
         bin.install "sitectl-isle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl-isle/releases/download/v0.17.3/sitectl-isle_Darwin_arm64.tar.gz"
-      sha256 "710d20a4d0e0003111e8bfda69683c8fb894b4819b4332334ef74e98b5e9b246"
+      url "https://github.com/libops/sitectl-isle/releases/download/v0.17.4/sitectl-isle_Darwin_arm64.tar.gz"
+      sha256 "d2355c2b7710914a9f1ed83ffe3f5c6e5ba27c4bfc4e41bb4bfda8f3e1bb0065"
 
       define_method(:install) do
         bin.install "sitectl-isle"
@@ -31,15 +31,15 @@ class SitectlIsle < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-isle/releases/download/v0.17.3/sitectl-isle_Linux_x86_64.tar.gz"
-      sha256 "efdd4e8fb3f0aa609479aaadcae32b2969b4f238b400bd4fc4932bd9ae36921e"
+      url "https://github.com/libops/sitectl-isle/releases/download/v0.17.4/sitectl-isle_Linux_x86_64.tar.gz"
+      sha256 "29e5d3cc0c424409cacd491dfce04285ebba42455c3c682ca2eff2f9272c0f16"
       define_method(:install) do
         bin.install "sitectl-isle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-isle/releases/download/v0.17.3/sitectl-isle_Linux_arm64.tar.gz"
-      sha256 "f272762aff8f78cba9a074f8e9929fd0b0fc152ade557b6750dcf8ed6b395895"
+      url "https://github.com/libops/sitectl-isle/releases/download/v0.17.4/sitectl-isle_Linux_arm64.tar.gz"
+      sha256 "69e439816f9c764a3e67b87a2845adb679b6d82b8dbaad7daa7cde1d6bd53f60"
       define_method(:install) do
         bin.install "sitectl-isle"
       end
