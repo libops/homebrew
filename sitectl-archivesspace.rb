@@ -5,22 +5,22 @@
 class SitectlArchivesspace < Formula
   desc ""
   homepage "https://github.com/libops/sitectl-archivesspace"
-  version "0.5.0"
+  version "0.6.0"
 
   depends_on "libops/homebrew/sitectl"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.5.0/sitectl-archivesspace_Darwin_x86_64.tar.gz"
-      sha256 "16a0ecf05c3b1683bdeebb70a570edb2e1f37825f661945cdce048e621d1c9a6"
+      url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.6.0/sitectl-archivesspace_Darwin_x86_64.tar.gz"
+      sha256 "b50e7149415b4b1723178213746ddf2ca74108447763fd06fd70ca3fb28b71b7"
 
       define_method(:install) do
         bin.install "sitectl-archivesspace"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.5.0/sitectl-archivesspace_Darwin_arm64.tar.gz"
-      sha256 "2da495329706edb25dc4f5c921d6f55d8586c8813081938278483fea1c827589"
+      url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.6.0/sitectl-archivesspace_Darwin_arm64.tar.gz"
+      sha256 "eead091ee7760846893fd9fa48da37df0c749f000cd2e6d05924882eeea316bd"
 
       define_method(:install) do
         bin.install "sitectl-archivesspace"
@@ -30,15 +30,15 @@ class SitectlArchivesspace < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.5.0/sitectl-archivesspace_Linux_x86_64.tar.gz"
-      sha256 "546a80348fda909ebb1faad4a92c88b39e8fcb6ecc7005e21ed8aedf5694dbb4"
+      url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.6.0/sitectl-archivesspace_Linux_x86_64.tar.gz"
+      sha256 "83c86caff7f2200afff2482094944fa3e707af7da9bfebd8303bcbaea65711bc"
       define_method(:install) do
         bin.install "sitectl-archivesspace"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.5.0/sitectl-archivesspace_Linux_arm64.tar.gz"
-      sha256 "404024c09681dbb85a4fe601f9f0303151d412af92873da164d1e9b448e4da5e"
+      url "https://github.com/libops/sitectl-archivesspace/releases/download/v0.6.0/sitectl-archivesspace_Linux_arm64.tar.gz"
+      sha256 "8a4c9c0fd06018cfb6114d1a0cef151a7f043223e420a25d6b848a562aa6b599"
       define_method(:install) do
         bin.install "sitectl-archivesspace"
       end
