@@ -30,12 +30,12 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           set -euo pipefail
-          if git diff --name-only --diff-filter=D "$BASE_SHA" "$HEAD_SHA" -- '*.rb' | grep -q .; then
+          if git diff --name-only --diff-filter=D "$BASE_SHA...$HEAD_SHA" -- '*.rb' | grep -q .; then
             echo "Formula deletion requires a separate reviewed migration process" >&2
             exit 1
           fi
           mapfile -d '' formulas < <(
-            git diff --name-only -z --diff-filter=ACMRT "$BASE_SHA" "$HEAD_SHA" -- '*.rb'
+            git diff --name-only -z --diff-filter=ACMRT "$BASE_SHA...$HEAD_SHA" -- '*.rb'
           )
           if (( ${#formulas[@]} == 0 )); then
             echo "No formulas changed"
