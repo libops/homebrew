@@ -6,14 +6,15 @@ require_relative "../scripts/verify-formulas"
 
 class VerifyFormulasTest < Minitest::Test
   def formula(description: "WordPress stacks", homepage: "https://github.com/libops/sitectl-wp",
-              version: "0.6.0", between: "")
+              version: "0.6.0", lifecycle: "", between: "", package: "sitectl-wp")
     <<~RUBY
       class SitectlWp < Formula
         desc "#{description}"
         homepage "#{homepage}"
         license "MIT"
         version "#{version}"
-        url "https://github.com/libops/sitectl-wp/releases/download/v#{version}/sitectl-wp_Linux_x86_64.tar.gz"
+        #{lifecycle}
+        url "https://github.com/libops/#{package}/releases/download/v#{version}/#{package}_Linux_x86_64.tar.gz"
         #{between}sha256 "#{"a" * 64}"
       end
     RUBY
@@ -64,6 +65,34 @@ class VerifyFormulasTest < Minitest::Test
     with_formula("class Broken < Formula\n") do |path|
       error = assert_raises(FormulaVerification::VerificationError) { FormulaVerification.parse(path) }
       assert_includes error.message, "invalid Ruby syntax"
+    end
+  end
+
+  def test_rejects_enabled_pre_v1_isle
+    content = formula(
+      description: "Islandora stacks",
+      homepage: "https://github.com/libops/sitectl-isle",
+      version: "0.19.0",
+      package: "sitectl-isle"
+    )
+    with_formula(content) do |path|
+      error = assert_raises(FormulaVerification::VerificationError) { FormulaVerification.parse(path) }
+      assert_includes error.message, "pre-v1 sitectl-isle must remain disabled"
+    end
+  end
+
+  def test_accepts_disabled_pre_v1_isle
+    content = formula(
+      description: "Islandora stacks",
+      homepage: "https://github.com/libops/sitectl-isle",
+      version: "0.19.0",
+      package: "sitectl-isle",
+      lifecycle: <<~RUBY
+        disable! date: "2026-07-16", because: "requires sitectl 0.40.0 and sitectl-drupal 0.12.0"
+      RUBY
+    )
+    with_formula(content) do |path|
+      assert_equal 1, FormulaVerification.parse(path).length
     end
   end
 end

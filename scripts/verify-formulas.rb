@@ -29,6 +29,7 @@ module FormulaVerification
     raise VerificationError, "#{path}: version is required" if version.nil?
 
     package = package_from_homepage(homepage, path)
+    validate_lifecycle(content, package, version, path)
     assets = parse_assets(content, path)
     assets.each { |asset| validate_url(asset.url, package, version, path) }
     assets
@@ -46,6 +47,25 @@ module FormulaVerification
     match[1]
   rescue URI::InvalidURIError
     raise VerificationError, "#{path}: homepage is not a valid URL"
+  end
+
+  def validate_lifecycle(content, package, version, path)
+    return unless package == "sitectl-isle"
+
+    match = version.match(/\A(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\z/)
+    raise VerificationError, "#{path}: sitectl-isle version must be exact SemVer" unless match
+    return unless match[1].to_i < 1
+
+    disable = content.match(
+      /^\s*disable!\s+date:\s*"([^"]+)",\s+because:\s*"([^"]+)"\s*$/
+    )
+    disabled = disable &&
+               disable[1].match?(/\A[0-9]{4}-[0-9]{2}-[0-9]{2}\z/) &&
+               disable[2] == "requires sitectl 0.40.0 and sitectl-drupal 0.12.0"
+    return if disabled
+
+    raise VerificationError,
+          "#{path}: pre-v1 sitectl-isle must remain disabled until its v1 RPC-compatible release"
   end
 
   def parse_assets(content, path)
