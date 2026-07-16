@@ -13,7 +13,7 @@ class SitectlWp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/libops/sitectl-wp/releases/download/v0.6.0/sitectl-wp_Darwin_x86_64.tar.gz"
-      sha256 "47c91d141f1fd5712f9dd2bce0a912cd30ee9ffa985065c10ff1f443b0847e38"
+      sha256 "900eeed7bcdb5e33015dea58c26f0a7c18773f8b39593679931a4b0c6b205ed4"
 
       define_method(:install) do
         bin.install "sitectl-wp"
@@ -21,7 +21,7 @@ class SitectlWp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/libops/sitectl-wp/releases/download/v0.6.0/sitectl-wp_Darwin_arm64.tar.gz"
-      sha256 "a37319c5ef817e721004577f883bdda2f84a767bfb3baa09d30ab51c4712d175"
+      sha256 "36b44d13b5c9079bf6e2070cdb97648597b2a88afdcaf4573b4336f3828e445a"
 
       define_method(:install) do
         bin.install "sitectl-wp"
@@ -32,14 +32,14 @@ class SitectlWp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-wp/releases/download/v0.6.0/sitectl-wp_Linux_x86_64.tar.gz"
-      sha256 "8783585d90bec6448c627aa45bb2e5737fc38bf1455346192af8b62be3e1659c"
+      sha256 "76aa9c22021e84cc39f0adf92b8fb31a8db35a90d22c8efe04145775c4f1e017"
       define_method(:install) do
         bin.install "sitectl-wp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/libops/sitectl-wp/releases/download/v0.6.0/sitectl-wp_Linux_arm64.tar.gz"
-      sha256 "4d9683026674cca8a64383d9aaee530d840c058ba51b5926ec46c9c805120342"
+      sha256 "dd0f707bba179cc19d42734f9571f9ba0474c6b9f14ab1bf02876da47bda098a"
       define_method(:install) do
         bin.install "sitectl-wp"
       end
