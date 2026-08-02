@@ -5,21 +5,21 @@
 class Sitectl < Formula
   desc "CLI for managing local and remote Docker Compose projects"
   homepage "https://github.com/libops/sitectl"
-  version "1.5.0"
+  version "1.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl/releases/download/v1.5.0/sitectl_Darwin_x86_64.tar.gz"
-      sha256 "eabbbff69acd5e7a8aaf3ff32e5f0e85fc8c43d4f9e460454cca49ba90739511"
+      url "https://github.com/libops/sitectl/releases/download/v1.6.0/sitectl_Darwin_x86_64.tar.gz"
+      sha256 "f82bcbe48d3dd517d38b8842030094bfde4891374d934d7817e471e0b6be8a80"
 
       define_method(:install) do
         bin.install "sitectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl/releases/download/v1.5.0/sitectl_Darwin_arm64.tar.gz"
-      sha256 "c5df38fed9ce9670219344f14503e427f4afb1f4dbd1b4ae6b347ccec67afcf2"
+      url "https://github.com/libops/sitectl/releases/download/v1.6.0/sitectl_Darwin_arm64.tar.gz"
+      sha256 "35127ec10e2e52b709601e83fb115b9a015e40e9e8ab53565bf7ee1eee720291"
 
       define_method(:install) do
         bin.install "sitectl"
@@ -29,15 +29,15 @@ class Sitectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl/releases/download/v1.5.0/sitectl_Linux_x86_64.tar.gz"
-      sha256 "50421a0d037ef95c2510f4f0d3727370d3e72480f6b4c5a22159df6001c9dd3a"
+      url "https://github.com/libops/sitectl/releases/download/v1.6.0/sitectl_Linux_x86_64.tar.gz"
+      sha256 "164926d7ab603f59a67306423f21b2363dce1a5336c4013820fd121146bc0d47"
       define_method(:install) do
         bin.install "sitectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl/releases/download/v1.5.0/sitectl_Linux_arm64.tar.gz"
-      sha256 "a56d616c6a8aa431b20ef81cba7581f570d770f07719ebdfde06a63221895d79"
+      url "https://github.com/libops/sitectl/releases/download/v1.6.0/sitectl_Linux_arm64.tar.gz"
+      sha256 "68054526924749b334fa49db278ad92a73c7c5196a165d6133cf5e147e1f3228"
       define_method(:install) do
         bin.install "sitectl"
       end
