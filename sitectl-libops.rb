@@ -5,23 +5,23 @@
 class SitectlLibops < Formula
   desc "A sitectl plugin for LibOps platform operations"
   homepage "https://github.com/libops/sitectl-libops"
-  version "1.6.0"
+  version "1.6.1"
   license "MIT"
 
   depends_on "libops/homebrew/sitectl"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl-libops/releases/download/v1.6.0/sitectl-libops_Darwin_x86_64.tar.gz"
-      sha256 "5e68db0d3d4ecbb7b493d2f0d5c930212e47640acae9c0c83a26085fda9cddd3"
+      url "https://github.com/libops/sitectl-libops/releases/download/v1.6.1/sitectl-libops_Darwin_x86_64.tar.gz"
+      sha256 "d02f679b7963fd1dcdd6bfa1623194dcdd34998909412b9e07d1a160a6fd20aa"
 
       define_method(:install) do
         bin.install "sitectl-libops"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl-libops/releases/download/v1.6.0/sitectl-libops_Darwin_arm64.tar.gz"
-      sha256 "2b20d53b9466342baafa1f6ec42a53575c58a4bec53db297affc40671c1d541b"
+      url "https://github.com/libops/sitectl-libops/releases/download/v1.6.1/sitectl-libops_Darwin_arm64.tar.gz"
+      sha256 "2e6effce147d04a31bf62f0355495250330de6c5a24d903884fb54ff0d959f96"
 
       define_method(:install) do
         bin.install "sitectl-libops"
@@ -31,15 +31,15 @@ class SitectlLibops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-libops/releases/download/v1.6.0/sitectl-libops_Linux_x86_64.tar.gz"
-      sha256 "4213964a0662129723dfae1bcf1eceb76308fd0a92ac0b686dd4568171be1f18"
+      url "https://github.com/libops/sitectl-libops/releases/download/v1.6.1/sitectl-libops_Linux_x86_64.tar.gz"
+      sha256 "1b5dbdae789a75103c3ec031f187376bcfe70ff1156cd6aa08781cb86059ea3b"
       define_method(:install) do
         bin.install "sitectl-libops"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-libops/releases/download/v1.6.0/sitectl-libops_Linux_arm64.tar.gz"
-      sha256 "3af8249a0361a86194aaf0db5e97dab9e389d1087c909b1adc43b4974d8e514e"
+      url "https://github.com/libops/sitectl-libops/releases/download/v1.6.1/sitectl-libops_Linux_arm64.tar.gz"
+      sha256 "863691f847fafce551e60640a2ade5e1315daf682cf769876b06a941a51d368b"
       define_method(:install) do
         bin.install "sitectl-libops"
       end
