@@ -5,23 +5,23 @@
 class SitectlOmekaS < Formula
   desc "A sitectl plugin for Omeka S stacks"
   homepage "https://github.com/libops/sitectl-omeka-s"
-  version "1.2.0"
+  version "1.3.0"
   license "MIT"
 
   depends_on "libops/homebrew/sitectl"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl-omeka-s/releases/download/v1.2.0/sitectl-omeka-s_Darwin_x86_64.tar.gz"
-      sha256 "846695470156cbad50f5d53976c9dd3c43514f352811cd92638ed31b83159ace"
+      url "https://github.com/libops/sitectl-omeka-s/releases/download/v1.3.0/sitectl-omeka-s_Darwin_x86_64.tar.gz"
+      sha256 "1107f3fc1146a7babd1feab4b5d9bdf20d8dc771e91773f6c7b3c1777a448c42"
 
       define_method(:install) do
         bin.install "sitectl-omeka-s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl-omeka-s/releases/download/v1.2.0/sitectl-omeka-s_Darwin_arm64.tar.gz"
-      sha256 "122a5bba96a2aac7a8f17e114a1a22661434bf08e08ff3bd0a66f6c2687c1e29"
+      url "https://github.com/libops/sitectl-omeka-s/releases/download/v1.3.0/sitectl-omeka-s_Darwin_arm64.tar.gz"
+      sha256 "ef8d3de024c5392825c87383b9b913b5225b6c4cb2a1fafc745e587af2ba0d4b"
 
       define_method(:install) do
         bin.install "sitectl-omeka-s"
@@ -31,15 +31,15 @@ class SitectlOmekaS < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-omeka-s/releases/download/v1.2.0/sitectl-omeka-s_Linux_x86_64.tar.gz"
-      sha256 "04800408fb27dd714e7d56a6af1777a45c7d60da5754b7f1b406e2d48ec6e44d"
+      url "https://github.com/libops/sitectl-omeka-s/releases/download/v1.3.0/sitectl-omeka-s_Linux_x86_64.tar.gz"
+      sha256 "3fa1ae4439c4930840bbe888fae379bb75d9ffdfd9f45c23aeff557a6cef3677"
       define_method(:install) do
         bin.install "sitectl-omeka-s"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-omeka-s/releases/download/v1.2.0/sitectl-omeka-s_Linux_arm64.tar.gz"
-      sha256 "113adcc98e9d1e1e2b8bfdb8cc579d44a34f2b2ccb671f5afb1905253c7dc69a"
+      url "https://github.com/libops/sitectl-omeka-s/releases/download/v1.3.0/sitectl-omeka-s_Linux_arm64.tar.gz"
+      sha256 "b239dbc2937cf739420e921ee2791ec7d4b85fd5b8c1b819fd412d4741aafa77"
       define_method(:install) do
         bin.install "sitectl-omeka-s"
       end
