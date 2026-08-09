@@ -5,23 +5,23 @@
 class SitectlDrupal < Formula
   desc "A sitectl plugin for Drupal websites"
   homepage "https://github.com/libops/sitectl-drupal"
-  version "1.4.0"
+  version "1.4.1"
   license "MIT"
 
   depends_on "libops/homebrew/sitectl"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl-drupal/releases/download/v1.4.0/sitectl-drupal_Darwin_x86_64.tar.gz"
-      sha256 "4929b533977894ae43ee05e6314d560d59fe0824946e28d2f0f603c2b8b1955e"
+      url "https://github.com/libops/sitectl-drupal/releases/download/v1.4.1/sitectl-drupal_Darwin_x86_64.tar.gz"
+      sha256 "3292e0862639d2a9b35df92faf4465b781f2003e995b80b38a5678eb3549a872"
 
       define_method(:install) do
         bin.install "sitectl-drupal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl-drupal/releases/download/v1.4.0/sitectl-drupal_Darwin_arm64.tar.gz"
-      sha256 "42ab58b7f565b56fb942a9362a220a369aac7476df9a28d4172b33651e1caecc"
+      url "https://github.com/libops/sitectl-drupal/releases/download/v1.4.1/sitectl-drupal_Darwin_arm64.tar.gz"
+      sha256 "08e6fef68c5465a1903da896f79e347d367dfc4ac86507d54d960a3e4126f71a"
 
       define_method(:install) do
         bin.install "sitectl-drupal"
@@ -31,15 +31,15 @@ class SitectlDrupal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-drupal/releases/download/v1.4.0/sitectl-drupal_Linux_x86_64.tar.gz"
-      sha256 "eeedf7fa6b63044a0e1692ebd1b9b4d2eaa54f23f1d5fb50e57b95a743021c67"
+      url "https://github.com/libops/sitectl-drupal/releases/download/v1.4.1/sitectl-drupal_Linux_x86_64.tar.gz"
+      sha256 "7f0d900c43a37109711c61a106f2aa51735d604af8d212db52d31c0c9a0b8ec2"
       define_method(:install) do
         bin.install "sitectl-drupal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-drupal/releases/download/v1.4.0/sitectl-drupal_Linux_arm64.tar.gz"
-      sha256 "24bf04f9e2ed35def738b75667f7a38e6a1045c6f1770232c60dc9636c5ff184"
+      url "https://github.com/libops/sitectl-drupal/releases/download/v1.4.1/sitectl-drupal_Linux_arm64.tar.gz"
+      sha256 "7f4dac76b0a4740018dee5063ef4e2efbe9e5fba8040e17be2074ccff2c0ebaa"
       define_method(:install) do
         bin.install "sitectl-drupal"
       end
