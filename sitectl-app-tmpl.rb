@@ -5,23 +5,23 @@
 class SitectlAppTmpl < Formula
   desc "A sitectl plugin template for application Compose stacks"
   homepage "https://github.com/libops/sitectl-app-tmpl"
-  version "1.3.0"
+  version "1.4.0"
   license "MIT"
 
   depends_on "libops/homebrew/sitectl"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/libops/sitectl-app-tmpl/releases/download/v1.3.0/sitectl-app-tmpl_Darwin_x86_64.tar.gz"
-      sha256 "7cb1dc0470070f183cdde2023ae8fff0d96dc4104c8cdedc654926406f927bed"
+      url "https://github.com/libops/sitectl-app-tmpl/releases/download/v1.4.0/sitectl-app-tmpl_Darwin_x86_64.tar.gz"
+      sha256 "fab26477d3a26861f8c707fe3888554949567c333c28ce9dbe95ab80a215aa17"
 
       define_method(:install) do
         bin.install "sitectl-app-tmpl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/libops/sitectl-app-tmpl/releases/download/v1.3.0/sitectl-app-tmpl_Darwin_arm64.tar.gz"
-      sha256 "33fac4b62014acd6e942cb1caddac902f396debc8b319175c818b021180a39c7"
+      url "https://github.com/libops/sitectl-app-tmpl/releases/download/v1.4.0/sitectl-app-tmpl_Darwin_arm64.tar.gz"
+      sha256 "5656e449202bd9d73859482262ea74c10a68e58a49fd6e8100a755b4f8408fde"
 
       define_method(:install) do
         bin.install "sitectl-app-tmpl"
@@ -31,15 +31,15 @@ class SitectlAppTmpl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-app-tmpl/releases/download/v1.3.0/sitectl-app-tmpl_Linux_x86_64.tar.gz"
-      sha256 "f876eb7f44c94f0396d4bfca6b352054a9a927554ab1510e24407aa157506d26"
+      url "https://github.com/libops/sitectl-app-tmpl/releases/download/v1.4.0/sitectl-app-tmpl_Linux_x86_64.tar.gz"
+      sha256 "57c1de3cfb43ee6c79f9e70eb6ab36736d6af3f3529d5baf8a8513bc779ec974"
       define_method(:install) do
         bin.install "sitectl-app-tmpl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/libops/sitectl-app-tmpl/releases/download/v1.3.0/sitectl-app-tmpl_Linux_arm64.tar.gz"
-      sha256 "8f90874cb7b43c52c069894389b926b0ba9c423ed82b78beff4a652495d0b42d"
+      url "https://github.com/libops/sitectl-app-tmpl/releases/download/v1.4.0/sitectl-app-tmpl_Linux_arm64.tar.gz"
+      sha256 "f731eb8fd83f4efb9007ac0eaee2e1dad6c0c3b84664ef48db74d36ccd3783fb"
       define_method(:install) do
         bin.install "sitectl-app-tmpl"
       end
